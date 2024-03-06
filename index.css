@@ -1,0 +1,41 @@
+#amount{
+    margin-left: 100px ;
+}
+body button{
+    text-align: center;
+}
+#board{
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    background-color: rgb(117, 87, 87);
+    margin: auto;
+    border-width:1cap;
+    border-color: black;
+}
+#info{
+    border-top-left-radius: 10px;
+   background-color: aqua;
+   text-align: center;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    border-width:1cap;
+}
+h1{
+    background-color: aliceblue;
+}
+
+input{
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 3px;
+    border: none;
+}
+button{
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px;
+    border: none;
+} 
