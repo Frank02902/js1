@@ -5,6 +5,10 @@ let amount;
 let name;
 let number;
  
+function display(){
+    document.getElementById("name").innerHTML = "Name: " + name;
+    document.getElementById("amount").innerHTML = "Balance: " + amount +"XAF";
+}
 
 document.getElementById("start").onclick = function () { 
     fname = document.getElementById("fname").value;
@@ -13,8 +17,7 @@ document.getElementById("start").onclick = function () {
     amount = document.getElementById("deposit").value;
     amount = Number(amount)
     name = fname + " " +  lname;
-    document.getElementById("name").innerHTML = name;
-    document.getElementById("amount").innerHTML = amount;
+   display()
   
 }
 
@@ -24,11 +27,12 @@ document.getElementById("over").onclick = function (){
     if(number > 4){
         document.getElementById("result").innerHTML = "Win"
         amount += 250;
-        document.getElementById("amount").innerHTML = amount;}
+        }
     else {
         document.getElementById("result").innerHTML = "Fail"
         amount -= 250;
-        document.getElementById("amount").innerHTML = amount}
+        }
+        display()
 
         document.getElementById("inside").innerHTML = "Number:" + number 
 }
@@ -38,23 +42,29 @@ document.getElementById("4").onclick = function (){
     if(number === 4){
         document.getElementById("result").innerHTML = "Win"
         amount += 250;
-        document.getElementById("amount").innerHTML = amount}
+       }
     else {
         document.getElementById("result").innerHTML = "Fail"
         amount -= 250;
-        document.getElementById("amount").innerHTML = amount}
-        document.getElementById("inside").innerHTML = "Number:" + number
+        
+    }
+    display()
+       document.getElementById("inside").innerHTML = "Number:" + number 
 }
+
 
 document.getElementById("under").onclick = function (){
     number = Math.floor(Math.random()*7+1)
     if(number < 4){
         document.getElementById("result").innerHTML = "Win"
         amount += 250
-        document.getElementById("amount").innerHTML = amount}
+        }
     else {
         document.getElementById("result").innerHTML = "Fail"
         amount -= 250
-        document.getElementById("amount").innerHTML = amount}
-        document.getElementById("inside").innerHTML = "Number:" + number
+        
+      
+    }
+    display()
+    document.getElementById("inside").innerHTML = "Number:" + number 
 }
